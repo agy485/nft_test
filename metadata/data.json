@@ -1,0 +1,10 @@
+{
+  "description": "Friendly OpenSea Creature that enjoys long swims in the ocean.",  
+  "image": "https://github.com/agy485/nft_test/images/Messenger.png", 
+  "name": "Dave Starbelly",
+  "attributes": [{
+      "display_type": "number", 
+      "trait_type": "Generation", 
+      "value": 2
+    }], 
+}
