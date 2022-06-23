@@ -49,6 +49,15 @@ DMU consuming little inputs and producing little outputs may also stand on the e
 
 ![frontier](./frontier.jpg)
 ![good](./good.jpg)
+
+Since the frontier estimated by VRS model may not fit the real production function just as the picture below shows, we have to form the interval that best parameters set most likely lies in to search for it.
+
+![production_function](./production_function.jpg)
+
+We conduct hierarchical clustering on the remaining 36 data points, spliting the data into three clusters. After that, we find the upper and the lower bound of each cluster. Thus, we have decided our searching space which is worth to explore.
+
+![clustering](./clustering.jpg)
+
 #### 5. Tune hyper-parameters inside the interval
 We use grid search to look for the best parameters set on the interval found in the previous step. After that, optimal parameters set in our searching space can be decided.
 ### Experiment Result and Future Work
@@ -56,23 +65,27 @@ Compared with traditional grid search, our method can find an efficient hyperpar
 
 diabetes datasets  | DEA | Grid Search
 ------------- | ------------- | -------------
-Total model trained | 5 | 2
-Total training time  | 1 | 1
-Best recall  | 20 | 10
-n_estimators | 5 | 2
-max_depth  | 1 | 1
-Data size  | 20 | 10
+Total model trained | 100376 | 2255
+Total training time  | > 3 hours | 2m 55s
+Best recall  | 0.745 | 0.727
+n_estimators | 9 | 11
+max_depth  | 9 | 8
+Data size  | 401 | 361
 
 faults datasets  | DEA | Grid Search
 ------------- | ------------- | -------------
-Total model trained | 5 | 2
-Total training time  | 1 | 1
-Best recall  | 20 | 10
-n_estimators | 5 | 2
-max_depth  | 1 | 1
-Data size  | 20 | 10
+Total model trained | 43362 | 5936
+Total training time  | > 2 hours | 4m 55s
+Best recall  | 0.713 | 0.710
+n_estimators | 18 | 17
+max_depth  | 8 | 6
+Data size  | 1040 | 940
 
-Furthermore, the distribution of model's recall also shows that the method we purpose is able to allocate computing resources to more important region after constucting the frontier.
+Furthermore, the distribution of model's recall also shows that the method we purpose is able to allocate computing resources to the more important region after constucting the frontier.
 
 ![hist_dea_grid](./hist_dea_grid.jpg)
 ![hist_grid](./hist_grid.jpg)
+
+However, not every hyper-parameter is similar to input resource, and the relation between hyper-parameter may be complicated. These are the difficulties we will try to overcome to apply our method to other machine learning model.
+
+### Reference
