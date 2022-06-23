@@ -1,4 +1,3 @@
-$\sqrt{3x-1}+(1+x)^2$
 # Hyper-parameters Tuning Using VRS Model
 ### Instruction
 Random forest is a widely used machine learning method for classification problems. Given a set of training data, the model constructs `n_estimators` decision tree, each of which has the depth up to `max_depth`. After fitting training data set, the model can predict the category of a sequence of feactures by the class selected by most trees.
@@ -47,7 +46,31 @@ $$ u_0 \quad is \quad free \quad variable $$
 By employing VRS model on our DMUs, we can separate efficient parameters sets from others and construct efficiency frontier accordingly.
 #### 4. Find the interval best parameters set lies in
 DMU consuming little inputs and producing little outputs may also stand on the efficiency frontier, but it won't fulfill our task for its poor performance. As a result, DMUs on the frontier are required a certain level of performance. In the diabetes dataset, there are 36 remaining DMUs after filtering them by recall.
-![hist](./hist.jpg)![good](./good.jpg)
+![frontier](./frontier.jpg)
+![good](./good.jpg)
 #### 5. Tune hyper-parameters inside the interval
 We use grid search to look for the best parameters set on the interval found in the previous step. After that, optimal parameters set in our searching space can be decided.
-#### 6. Compare with traditional tuning method
+### Experiment Result and Future Work
+Compared with traditional grid search, our method can find an efficient hyperparameter combination with less computing resources. The tables below show our experiment results in diabetes and faults datasets respectively.
+
+diabetes datasets  | DEA | Grid Search
+------------- | ------------- | -------------
+Total model trained | 5 | 2
+Total training time  | 1 | 1
+Best recall  | 20 | 10
+n_estimators | 5 | 2
+max_depth  | 1 | 1
+Data size  | 20 | 10
+
+faults datasets  | DEA | Grid Search
+------------- | ------------- | -------------
+Total model trained | 5 | 2
+Total training time  | 1 | 1
+Best recall  | 20 | 10
+n_estimators | 5 | 2
+max_depth  | 1 | 1
+Data size  | 20 | 10
+
+Furthermore, the distribution of model's recall also shows that the method we purpose is able to allocate computing resources to more important region after constucting the frontier.
+![hist_dea_grid](./hist_dea_grid.jpg)
+![hist_grid](./hist_grid.jpg)
