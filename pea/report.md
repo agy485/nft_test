@@ -38,12 +38,12 @@ Let there be K DMUs. Each DMU<sub>r</sub> consumes I inputs say x<sub>r1</sup></
 
 $$ Max \quad \frac{\sum_J u_j y_{rj}-u_0}{\sum_I v_jx_{ri}} $$
 
-$$ s.t. \quad \frac{\sum_Ju_jy_{kj}-u_0}{\sum_^Iv_jx_{ki}} \leq 1 , \quad k=1,2,...,K $$
+$$ s.t. \quad \frac{\sum_J u_j y_{kj}-u_0}{\sum_I v_j x_{ki}} \leq 1 , \quad k=1,2,...,K $$
 
 $$ u_j \geq 0 , \quad j=1,2,...,J $$
 
 $$ v_i \geq 0 , \quad i=1,2,...,I $$
-<center>$u_0$is free variable</center>
+<center>$ u_0 $is free variable</center>
 By employing VRS model on our DMUs, we can separate efficient parameters sets from others and construct efficiency frontier accordingly.
 #### 4. Find the interval best parameters set lies in
 DMU consuming little inputs and producing little outputs may also stand on the efficiency frontier, but it won't fulfill our task for its poor performance. As a result, DMUs on the frontier are required a certain level of performance. In the diabetes dataset, there are 36 remaining DMUs after filtering them by recall.
