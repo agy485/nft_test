@@ -46,6 +46,7 @@ $$ u_0 \quad is \quad free \quad variable $$
 By employing VRS model on our DMUs, we can separate efficient parameters sets from others and construct efficiency frontier accordingly.
 #### 4. Find the interval best parameters set lies in
 DMU consuming little inputs and producing little outputs may also stand on the efficiency frontier, but it won't fulfill our task for its poor performance. As a result, DMUs on the frontier are required a certain level of performance. In the diabetes dataset, there are 36 remaining DMUs after filtering them by recall.
+
 ![frontier](./frontier.jpg)
 ![good](./good.jpg)
 #### 5. Tune hyper-parameters inside the interval
@@ -72,5 +73,6 @@ max_depth  | 1 | 1
 Data size  | 20 | 10
 
 Furthermore, the distribution of model's recall also shows that the method we purpose is able to allocate computing resources to more important region after constucting the frontier.
+
 ![hist_dea_grid](./hist_dea_grid.jpg)
 ![hist_grid](./hist_grid.jpg)
