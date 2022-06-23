@@ -36,7 +36,7 @@ DEA was proposed for finding the relative efficiencies of DMUs. The relative eff
 
 Let there be K DMUs. Each DMU<sub>r</sub> consumes I inputs say x<sub>r1</sup></sub>, x<sub>r2</sup></sub>,..., x<sub>rI</sup></sub> and produces J outputs say y<sub>r1</sup></sub>, y<sub>r2</sup></sub>,..., y<sub>rJ</sup></sub>. Let v<sub>1</sup></sub>, v<sub>2</sup></sub>,...,v<sub>I</sup></sub> be the weights associated with the inputs and u<sub>1</sup></sub>, u<sub>2</sup></sub>,..., u<sub>J</sup></sub> be the weights associated with the outputs. In the Banker, Charnes, Cooper's VRS model, the objective is to maximize the ratio of output to input as given below:
 
-$$ Max \quad \frac{\sum_{j=1}^J u_j y_{rj}-u_0}{\sum_{i=1}^I v_jx_{ri}} $$
+$$ Max \quad \frac{\sum_J u_j y_{rj}-u_0}{\sum_I v_jx_{ri}} $$
 
 ```math
 s.t.
