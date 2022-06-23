@@ -38,13 +38,9 @@ Let there be K DMUs. Each DMU<sub>r</sub> consumes I inputs say x<sub>r1</sup></
 
 $$ Max \quad \frac{\sum_J u_j y_{rj}-u_0}{\sum_I v_jx_{ri}} $$
 
-```math
-s.t.
-\quad
-\left( \frac{\sum_{j=1}^Ju_jy_{kj}-u_0}{\sum_{i=1}^Iv_jx_{ki}} \right)
-\leq 1
-, \quad k=1,2,...,K
-```
+$$ \sum_{i=1}^J v_j $$
+
+$$ s.t. \quad \frac{\sum_{j=1}^Ju_jy_{kj}-u_0}{\sum_{i=1}^Iv_jx_{ki}} \leq 1 , \quad k=1,2,...,K $$
 ```math
 u_j
 \geq 0
