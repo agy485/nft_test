@@ -35,11 +35,9 @@ After sampling the data points, we use these parameter sets to train random fore
 DEA was proposed for finding the relative efficiencies of DMUs. The relative efficiency of a DMU **r** is measured by finding the best weights of all inputs and outputs to maximize **r**'s efficiency. Besides, the weights should be positive, and the other DMUs' efficiency should be on the interval [0, 1].
 
 Let there be K DMUs. Each DMU<sub>r</sub> consumes I inputs say x<sub>r1</sup></sub>, x<sub>r2</sup></sub>,..., x<sub>rI</sup></sub> and produces J outputs say y<sub>r1</sup></sub>, y<sub>r2</sup></sub>,..., y<sub>rJ</sup></sub>. Let v<sub>1</sup></sub>, v<sub>2</sup></sub>,...,v<sub>I</sup></sub> be the weights associated with the inputs and u<sub>1</sup></sub>, u<sub>2</sup></sub>,..., u<sub>J</sup></sub> be the weights associated with the outputs. In the Banker, Charnes, Cooper's VRS model, the objective is to maximize the ratio of output to input as given below:
-$$
-Max
-\quad
-\frac{\sum_{j=1}^Ju_jy_{rj}-u_0}{\sum_{i=1}^Iv_jx_{ri}}
-$$
+
+$$ Max \quad \frac{\sum_{j=1}^Ju_jy_{rj}-u_0}{\sum_{i=1}^Iv_jx_{ri}} $$
+
 ```math
 s.t.
 \quad
